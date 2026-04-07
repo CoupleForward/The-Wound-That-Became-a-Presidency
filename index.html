@@ -10,14 +10,14 @@
 :root{--bg:#0a0a0a;--text:#d4cfc4;--accent:#c4553a;--muted:#6b6560;--link:#8a7e6b;--link-hover:#c4553a;--divider:#1f1d1a;--urgent:#d4443a}
 *{margin:0;padding:0;box-sizing:border-box}
 body{background:var(--bg);color:var(--text);font-family:'Cormorant Garamond',Georgia,serif;line-height:1.75;-webkit-font-smoothing:antialiased;overflow-x:hidden}
-.page{max-width:680px;margin:0 auto;padding:80px 24px 120px}
+.bg-image{position:fixed;top:0;left:50%;transform:translateX(-50%);width:100%;max-width:800px;height:100vh;background:url('data:image/jpeg;base64,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ADRQaKACiiigAopKKAFooooAKSlooAKKKKACiiigAoopKAFopKKACikpaAEooooAKDRRQAUCiigBaKKKAFFFFJQAtFFFABRRRQAUUtFACUUUUAFFFFABRRRQAUtJRQAtFJS0AFFFFABRRiigAooooAKKKKACilpKACiiigAoopKAFpDS9qSgAooooAKKKKACiiigAooooAKKKKACiiigAoopKAFooooAKSlpKADGaKUdKKAG0tFJQAUUUUAFFFFABRRRQAtLTaUUALSUtFABRRRQAUUUUAFFLSUAFFFFABRRRQAUUUUAFFFFABRRRQAtFJS5oAWkoooAKKKSgBaKSloAKKKSgApaSigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACkpaKAEpaKSgBaSg9aO9ADqKKKAGUUUUAFFFFABRRRQAUUUUALRRRQAUUUtACUtJS0AFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRSUALRRRQAUUUUAFFFFABRRRQAUUUlAC0UUlAC0lFFAAKWgUhoAKKSigBe9KKb3pe1AC0U3NFABRRRQAUUUUAFFFFABRRRQAoooFFAC0UUlAC0UUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABSUUUALRR2ooAKKKKACiiigAooooAKKKKACkpaKAEooooAKDS0hoASiiigAoJoooAKKXNFACUUUUAFFFFABRRSUALRRRQAUtJS0ALRRRQAUUUUAFFFFABSUtFABRRRQAUUUUAFFFFIAooopgFFFFABRRRQAUUUUAFBoooASlopKACloooAKSlooASloooAKKKSgBaKKKACiiigAooooAKKKKACiiigApKWigBKQ0tJQAUUUUABooNJQAtFLRQAlFFFABRRRQAUUUUAFFFFABSiiigBaKKKACiiigAooooAKKKKACiiigAooopALSUtJQAUUUUwCiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKSgBaKKKACikooAWiikoADSUtJQAUUUUAJSiiigBaKSigAopaKAEooooAKKKKACiiigApaSgUAOopKKAFopKKAFooooAKKSigApaSloAKKKKACiiigAooooAKMUCloAMUlLRQAlBpaKAA0lFLQAlFFFABRRRQAUUUUAFJS0lAC0UUUAFFFFABRRRQAUlFFAC0lFFABRRRQAUlFFABRRRQAUUUUAFFFFABRRRQAtAopKACiiigBKWkpaACiiigAooooAWijNJQAtFFFABRRRQAUUUUAFLSUtABRRRQAUUUlAC0UUUAFLSUUAFLSUUAFFFKKACijHNLQA2ilooASiiigAoopKAClpKWgAooooASilooAKSiigAoooNABRSUtABRRRQAUlFFABRRRQAUUUUAFFLSUAFFFFABRS0lABRRQaAEpaSigBaKSlFABRRQKACiiigApaSigBaKKKAEpaSloAWiikoAWikpaACkpaKACikpaAClpK2NDtYXzNOgc5wit0+tJuw0rmOOaK7O8061vLZh5aJJj5XUAEH/CuNIIYgjBBwaSdwasJXVaRBDaxLhAZSMs5HP0rl1GWUepFb8M5ikOelTMqCNXUre3vLR0dAJMEo2OQa4oV1kc3nGuVbhj9aIMJqw2g1oWej3N7H5ibUQ9Gc9fpUV/p1xYECdBtboynINXdE2KdFFFMQUlLRQAUUUUAFFFFABSUUUALSUUUAFBooNACUUUdqACiiigAooooAKKKKACloooASiiigAooooAKKKKACkpTSUAFFFFABRRRQAUopBS0AFFFFABRRRQAtFFFACUtJQKAFooooAKWikoAWiiigBKWkpaAFFa9gxjhjx6ZrIrXtjiGP8A3RUT2LhubMVyGUCuVvF23k4H/PQ/zrcgJ3cAn6Csa/GL6f8A3qmG5UyK3GbiMf7QrVlI31n2K7ruP2yf0rYCqx5xTnuENh9mf5VzZ5P1NddbeWhAVRk965SVdk0i+jEfrRAUzqrKXChRwBwKdqJF5YzQsMnaWU+hHIrLSZlCsp6qD+lXbNzI2G5zxUF2OWop0i7HZf7pIptbmAUUCigAooooAKSgmkoAWikpaACiijNACUtJS0AJRRRQAUUUUAFFFFABRRRQAUUUtACUUUUAFFFFABRRRQAlFFFABRRRQAUUUUAFL3pKWgAooooAKKKKAFooooASig0UAKKKBRQAUtJS0AJRRRQAtFFLQAVu2JURqrAHgVhVt2/b6VEy4GxC6rgLgVzmtrt1OQ/3grfpWzCGPKgn8Ky9eH+l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mtIESEooorQgKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKAFopKKACiiigAooooAKKKKAEopaSgApaSloAKKKKACiiigBaSlpKACiiigAooooASloooAKO9FFAC96SiigBaFYqQw6ikooAvI4dQwq3BLjrWVFJsb2PWriNg5HSoaLTNeOWrcU3IrFSXmrUU3NQ0Xc3ElyKlVs1lxzkjr+NW0mAFSBaZs8CoytMWQNTvMxQA4HAqOR/ekd/Sq0sm1etAGfrVxstXUHl/lrnKv6vP5twEByEHP1qhW0VZGcnqFFFFUSFFFFABRRRQAUCiigAooooAKKKSgBaBRSUALmiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACkpaSgBaKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooABViB/4D+FV6cpwwPvQxovLViM4qsOtTxgetZs0L0bnFSiQjvVeNAf4j+VTiHjiT9KgZMlxjipRNnvVCRJF7Bh6im+Yy9QRQM0WlyOtU7mbZG7nooJqITnPWo9RJGnO2CNxAyaEtRMwmYuxZuSTk0lFFbmIUUUUAFFFFABRRRQAUUUlAC0UUUAFJS0UAFFJS0AFFFFABSUtFABRRSUALRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRSUtABRRRQAlFFLQAUUUUAFFFFABRRSUALRSUtABSim0o60AXh96rcQBFVVGTViIletZs1Lcarn/AANWVUY5JqtGRVmM+hqBkgiUj5ZPzo+zyHpg/jTgoNSpGR0Y0ARpauOSVFVtbh/4lTkc7WU/rWmqnHJzUGpx79NuV/6Zk/lzQtxPY4qiiitzIKKKKACiiigAooooAKSlooAKKKSgBaKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAoopKAFooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigBKcvLD60lKn31+tAF9OtWIzUC9asoOKyNSZKtxqDzniqidasRfWkwLsca+tTrEo7k/jVaLOatp05qRjgoHQVHON1tKvqjD9KlqOT/Vt9D/KgDgaWiiugxCiiigAooooAKKKKACkpaKACkpaKAEpaSigBaKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAp0f+sX602nxf61frQMvp1qynSq0fWrS9KyNCVRU8YqJRViMUhliLqKtJVaPrVhTgVIDycUxj8p+hoY0xjQBwx6mihuGP1oroMgooooEFFFFMAooooAKKKKQBSUtFABSUtFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFSQf60VHUtsP3h+lJjRej61aXpVWOrSVmaE6VZjHFV4xVpBUsZNH1qYGokqQUgFPSo2qQ9KYRxQBxVwu24kX0cj9aZU98Nt9OP+mjfzqCuhGQUUUUCCiiigAooooAKKKKAFpDSikJoAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACinBTRQA2iiigAooooAKKKKACiiigAooooAKKKKAFpKKKAFpKKKACiiigAooooGFFFFAgooooGFFFFAgqa1+830oopPYa3L0VWUoorM0LUdWVoopDJl6VKKKKQAaTtRRQBx+p/8hG4/wB81VoorZbGTCiiimIKKKKACiiigYUdqKKBAOtFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFLRRQADqKU9aKKAJF6UUUUhn//2Q==') center top/cover no-repeat;opacity:0.12;pointer-events:none;z-index:0}
+.page{position:relative;z-index:1;max-width:680px;margin:0 auto;padding:80px 24px 120px}
 .pub-name{font-family:'DM Sans',sans-serif;font-size:11px;letter-spacing:4px;text-transform:uppercase;color:var(--muted);margin-bottom:8px;opacity:0;animation:fadeUp 1s ease .2s forwards}
 h1{font-family:'Cormorant Garamond',Georgia,serif;font-weight:300;font-size:clamp(36px,7vw,64px);line-height:1.1;color:#f0ebe0;margin-bottom:12px;letter-spacing:-1px;opacity:0;animation:fadeUp 1.2s ease .4s forwards}
 .subtitle{font-family:'DM Sans',sans-serif;font-size:13px;color:var(--muted);margin-bottom:48px;letter-spacing:.5px;opacity:0;animation:fadeUp 1s ease .6s forwards}
 .epigraph{font-style:italic;font-size:19px;color:var(--muted);border-left:2px solid var(--accent);padding-left:20px;margin-bottom:56px;max-width:520px;opacity:0;animation:fadeUp 1s ease .8s forwards}
 .verse{margin-bottom:36px;font-size:20px;line-height:1.8}
 .verse .line{display:block}
-.verse .arrow{color:var(--accent);font-weight:500}
 .verse .em{font-style:italic;color:#e8e0d0}
 .verse .strong{font-weight:600;color:#f0ebe0}
 .verse .quiet{color:var(--muted);font-size:18px}
@@ -46,6 +46,7 @@ h1{font-family:'Cormorant Garamond',Georgia,serif;font-weight:300;font-size:clam
 </style>
 </head>
 <body>
+<div class="bg-image"></div>
 <div class="page">
 
 <div class="pub-name">Research for my upcoming book</div>
@@ -60,7 +61,7 @@ by Christian J. Charette, LMFT<br>
 This is not about one man. This is about what happens when a wound is handed a microphone, a crowd, and the nuclear codes.
 </div>
 
-<!-- ════════ I. THE FATHER ════════ -->
+<!-- I. THE FATHER -->
 
 <div class="verse observe">
 <span class="line">Fred Trump told his sons to be killers.</span>
@@ -68,12 +69,12 @@ This is not about one man. This is about what happens when a wound is handed a m
 <span class="line">As doctrine.</span>
 </div>
 
-<a class="evidence observe" href="https://www.pbs.org/wgbh/frontline/article/trump-the-bully-how-childhood-military-school-shaped-the-future-president/" target="_blank" rel="noopener">PBS Frontline — "compete, win, be a killer… do what you have to do to win"</a>
+<a class="evidence observe" href="https://www.pbs.org/wgbh/frontline/article/trump-the-bully-how-childhood-military-school-shaped-the-future-president/" target="_blank" rel="noopener">PBS Frontline, "compete, win, be a killer… do what you have to do to win"</a>
 
 <div class="verse observe">
 <span class="line">The message was different for the boys than for the girls.</span>
 <span class="line">The boys were told to dominate.</span>
-<span class="line">The first son who refused — Fred Jr. — chose flying over real estate,</span>
+<span class="line">The first son who refused, Fred Jr., chose flying over real estate,</span>
 <span class="line">chose freedom over the family machine,</span>
 <span class="line">and drank himself dead at forty-two.</span>
 </div>
@@ -82,7 +83,7 @@ This is not about one man. This is about what happens when a wound is handed a m
 <span class="line">The second son who complied became president.</span>
 </div>
 
-<a class="evidence observe" href="https://www.britannica.com/biography/Fred-Trump" target="_blank" rel="noopener">Britannica — Fred urged his son to be a "killer" in anything he pursued</a>
+<a class="evidence observe" href="https://www.britannica.com/biography/Fred-Trump" target="_blank" rel="noopener">Britannica, Fred urged his son to be a "killer" in anything he pursued</a>
 
 <div class="breath"></div>
 
@@ -96,7 +97,7 @@ This is not about one man. This is about what happens when a wound is handed a m
 <span class="line quiet">"When you ask him about how she showed her love, he has nothing to say."</span>
 </div>
 
-<a class="evidence observe" href="https://www.pbs.org/wgbh/frontline/article/trump-the-bully-how-childhood-military-school-shaped-the-future-president/" target="_blank" rel="noopener">PBS Frontline — Mary Trump on Donald's mother's absence at a critical developmental stage</a>
+<a class="evidence observe" href="https://www.pbs.org/wgbh/frontline/article/trump-the-bully-how-childhood-military-school-shaped-the-future-president/" target="_blank" rel="noopener">PBS Frontline, Mary Trump on Donald's mother's absence at a critical developmental stage</a>
 
 <div class="verse observe">
 <span class="line">So the father filled the vacuum.</span>
@@ -117,11 +118,11 @@ This is not about one man. This is about what happens when a wound is handed a m
 
 <div class="section-break observe"></div>
 
-<!-- ════════ II. THE MIRROR ════════ -->
+<!-- II. THE MIRROR -->
 
 <div class="verse observe">
 <span class="line">If a man has a father wound,</span>
-<span class="line">the boy inside him will remain frozen —</span>
+<span class="line">the boy inside him will remain frozen,</span>
 <span class="line">forever auditioning for a father who never clapped.</span>
 </div>
 
@@ -129,8 +130,8 @@ This is not about one man. This is about what happens when a wound is handed a m
 
 <div class="verse observe">
 <span class="line">When he cannot secure love,</span>
-<span class="line">he mistakes dominance for approval <span class="arrow">→</span></span>
-<span class="line">control for safety <span class="arrow">→</span></span>
+<span class="line">he mistakes dominance for approval,</span>
+<span class="line">control for safety,</span>
 <span class="line">fear for respect.</span>
 </div>
 
@@ -139,7 +140,7 @@ This is not about one man. This is about what happens when a wound is handed a m
 <span class="line">He replaces it with mirrors.</span>
 </div>
 
-<a class="evidence observe" href="https://www.npr.org/2026/02/27/nx-s1-5718373/name-trump-white-house-ballroom-kennedy-center" target="_blank" rel="noopener">NPR — "The leader must be everywhere, his face must be everywhere, his name must be everywhere"</a>
+<a class="evidence observe" href="https://www.npr.org/2026/02/27/nx-s1-5718373/name-trump-white-house-ballroom-kennedy-center" target="_blank" rel="noopener">NPR, "The leader must be everywhere, his face must be everywhere, his name must be everywhere"</a>
 
 <div class="verse observe">
 <span class="line">Adornment becomes identity.</span>
@@ -148,9 +149,9 @@ This is not about one man. This is about what happens when a wound is handed a m
 <span class="line">Wealth becomes proof of worth instead of a tool.</span>
 </div>
 
-<a class="evidence observe" href="https://www.pbs.org/newshour/show/trumps-vision-for-d-c-draws-design-backlash-and-court-challenges" target="_blank" rel="noopener">PBS — East Wing demolished for a $400M ballroom. A 250-foot arch near Arlington. His signature on U.S. currency. His name on the Kennedy Center.</a>
-<a class="evidence observe" href="https://www.axios.com/2026/04/03/trump-ballroom-plans-miami-library" target="_blank" rel="noopener">Axios — A gold commemorative coin. His face on a banner hanging from the Justice Department. Airport trademark filings. Penn Station. Dulles.</a>
-<a class="evidence observe" href="https://democrats-judiciary.house.gov/media-center/press-releases/new-report-exposes-the-trump-family-s-multi-billion-dollar-crypto-empire-fueled-by-self-dealing-and-corrupt-foreign-interests" target="_blank" rel="noopener">House Judiciary Democrats — $11.6 billion in crypto holdings. $800 million in profits in six months. Top 220 memecoin holders invited to dinner with the president.</a>
+<a class="evidence observe" href="https://www.pbs.org/newshour/show/trumps-vision-for-d-c-draws-design-backlash-and-court-challenges" target="_blank" rel="noopener">PBS, East Wing demolished for a $400M ballroom. A 250-foot arch near Arlington. His signature on U.S. currency. His name on the Kennedy Center.</a>
+<a class="evidence observe" href="https://www.axios.com/2026/04/03/trump-ballroom-plans-miami-library" target="_blank" rel="noopener">Axios, A gold commemorative coin. His face on a banner hanging from the Justice Department. Airport trademark filings. Penn Station. Dulles.</a>
+<a class="evidence observe" href="https://democrats-judiciary.house.gov/media-center/press-releases/new-report-exposes-the-trump-family-s-multi-billion-dollar-crypto-empire-fueled-by-self-dealing-and-corrupt-foreign-interests" target="_blank" rel="noopener">House Judiciary Democrats, $11.6 billion in crypto holdings. $800 million in profits in six months. Top 220 memecoin holders invited to dinner with the president.</a>
 
 <div class="verse observe">
 <span class="line">Because if he stops shining,</span>
@@ -159,7 +160,7 @@ This is not about one man. This is about what happens when a wound is handed a m
 
 <div class="section-break observe"></div>
 
-<!-- ════════ III. THE BRAND ════════ -->
+<!-- III. THE BRAND -->
 
 <div class="verse observe">
 <span class="line">He learns early:</span>
@@ -190,16 +191,16 @@ This is not about one man. This is about what happens when a wound is handed a m
 </div>
 
 <div class="verse observe">
-<span class="line">Not disagreement <span class="arrow">→</span> abandonment.</span>
+<span class="line">Not disagreement. Abandonment.</span>
 </div>
 
 <div class="verse observe">
-<span class="line">Not feedback <span class="arrow">→</span> humiliation.</span>
+<span class="line">Not feedback. Humiliation.</span>
 </div>
 
-<a class="evidence observe" href="https://en.wikipedia.org/wiki/2025_dismissals_of_U.S._inspectors_general" target="_blank" rel="noopener">January 2025 — 17 independent watchdogs fired by email in a single night</a>
-<a class="evidence observe" href="https://www.cnbc.com/2026/03/05/trump-kristi-noem-markwayne-mullin-dhs.html" target="_blank" rel="noopener">March 2026 — Kristi Noem fired as DHS Secretary after contradicting him on camera. He told Reuters: "I never knew anything about it."</a>
-<a class="evidence observe" href="https://www.aljazeera.com/news/2026/4/2/trump-says-pam-bondi-out-as-attorney-general" target="_blank" rel="noopener">April 2, 2026 — Pam Bondi fired as Attorney General for failing to prosecute his enemies fast enough</a>
+<a class="evidence observe" href="https://en.wikipedia.org/wiki/2025_dismissals_of_U.S._inspectors_general" target="_blank" rel="noopener">January 2025, 17 independent watchdogs fired by email in a single night</a>
+<a class="evidence observe" href="https://www.cnbc.com/2026/03/05/trump-kristi-noem-markwayne-mullin-dhs.html" target="_blank" rel="noopener">March 2026, Kristi Noem fired as DHS Secretary after contradicting him on camera</a>
+<a class="evidence observe" href="https://www.aljazeera.com/news/2026/4/2/trump-says-pam-bondi-out-as-attorney-general" target="_blank" rel="noopener">April 2, 2026, Pam Bondi fired as Attorney General for failing to prosecute his enemies fast enough</a>
 
 <div class="verse observe">
 <span class="line">So he attacks.</span>
@@ -215,9 +216,9 @@ This is not about one man. This is about what happens when a wound is handed a m
 
 <div class="section-break wide observe"></div>
 
-<!-- ════════ IV. THE MECHANISM ════════ -->
+<!-- IV. THE MECHANISM -->
 
-<div class="pivot observe">A man with an unhealed father wound does not lead — he polices.</div>
+<div class="pivot observe">A man with an unhealed father wound does not lead. He polices.</div>
 
 <div class="verse observe">
 <span class="line">And because genuine connection was never learned,</span>
@@ -243,7 +244,7 @@ This is not about one man. This is about what happens when a wound is handed a m
 <div class="breath"></div>
 
 <div class="verse observe">
-<span class="line">He is obsessed with fairness — not justice.</span>
+<span class="line">He is obsessed with fairness, not justice.</span>
 </div>
 
 <div class="verse observe">
@@ -262,7 +263,7 @@ This is not about one man. This is about what happens when a wound is handed a m
 </div>
 
 <div class="verse observe">
-<span class="line">So he fixates <span class="arrow">→</span> counts <span class="arrow">→</span> audits <span class="arrow">→</span> recalculates.</span>
+<span class="line">So he fixates. Counts. Audits. Recalculates.</span>
 </div>
 
 <div class="verse observe">
@@ -277,10 +278,10 @@ This is not about one man. This is about what happens when a wound is handed a m
 
 <div class="section-break observe"></div>
 
-<!-- ════════ V. THE DEFENSE ════════ -->
+<!-- V. THE DEFENSE -->
 
 <div class="verse observe">
-<span class="line">He must always be the smartest <span class="arrow">→</span></span>
+<span class="line">He must always be the smartest</span>
 <span class="line">because being ignorant once meant being small.</span>
 </div>
 
@@ -289,7 +290,7 @@ This is not about one man. This is about what happens when a wound is handed a m
 </div>
 
 <div class="verse observe">
-<span class="line">Perfection is not pride here — it's defense.</span>
+<span class="line">Perfection is not pride here. It's defense.</span>
 </div>
 
 <div class="verse observe">
@@ -309,7 +310,7 @@ This is not about one man. This is about what happens when a wound is handed a m
 
 <div class="verse observe">
 <span class="line">When confronted with facts,</span>
-<span class="line">he does not integrate them — he overrides them.</span>
+<span class="line">he does not integrate them. He overrides them.</span>
 </div>
 
 <div class="verse observe">
@@ -320,7 +321,7 @@ This is not about one man. This is about what happens when a wound is handed a m
 
 <div class="verse observe">
 <span class="line">And when reality resists him,</span>
-<span class="line">he doubles down <span class="arrow">→</span> then triples down <span class="arrow">→</span></span>
+<span class="line">he doubles down, then triples down,</span>
 <span class="line">then demands loyalty as proof of truth.</span>
 </div>
 
@@ -332,9 +333,9 @@ This is not about one man. This is about what happens when a wound is handed a m
 <span class="line">"an embarrassment to their families."</span>
 </div>
 
-<a class="evidence observe" href="https://www.nbcnews.com/politics/donald-trump/trump-calls-supreme-court-justices-disloyal-unpatriotic-tariffs-rcna259948" target="_blank" rel="noopener">NBC — Trump calls Supreme Court justices "disloyal" and "unpatriotic" after tariff ruling</a>
-<a class="evidence observe" href="https://time.com/article/2026/03/16/trump-truth-social-supreme-court-tariffs-boasberg/" target="_blank" rel="noopener">TIME — Trump calls the Court "a weaponized and unjust Political Organization" that is "hurting our Country"</a>
-<a class="evidence observe" href="https://truthout.org/articles/trump-white-house-refuses-to-abide-by-1-in-3-court-orders-made-against-them/" target="_blank" rel="noopener">Truthout — The administration defied approximately 1 in 3 court rulings against it. Unprecedented.</a>
+<a class="evidence observe" href="https://www.nbcnews.com/politics/donald-trump/trump-calls-supreme-court-justices-disloyal-unpatriotic-tariffs-rcna259948" target="_blank" rel="noopener">NBC, Trump calls Supreme Court justices "disloyal" and "unpatriotic" after tariff ruling</a>
+<a class="evidence observe" href="https://time.com/article/2026/03/16/trump-truth-social-supreme-court-tariffs-boasberg/" target="_blank" rel="noopener">TIME, Trump calls the Court "a weaponized and unjust Political Organization"</a>
+<a class="evidence observe" href="https://truthout.org/articles/trump-white-house-refuses-to-abide-by-1-in-3-court-orders-made-against-them/" target="_blank" rel="noopener">Truthout, The administration defied approximately 1 in 3 court rulings against it</a>
 
 <div class="verse observe">
 <span class="line">Because truth is no longer factual.</span>
@@ -346,12 +347,12 @@ This is not about one man. This is about what happens when a wound is handed a m
 <span class="line">If you challenge him, you are disloyal.</span>
 </div>
 
-<a class="evidence observe" href="https://en.wikipedia.org/wiki/2025_United_States_federal_mass_layoffs" target="_blank" rel="noopener">2025 — Nearly 300,000 federal workers removed. Loyalty tests embedded in 5,800 job listings.</a>
-<a class="evidence observe" href="https://www.pewresearch.org/short-reads/2026/03/13/federal-workforce-shrank-10-in-trumps-first-year-back-in-office/" target="_blank" rel="noopener">Pew Research — Federal workforce shrank 10.3% in one year. USAID gutted by 92%. CDC lost a third of staff.</a>
+<a class="evidence observe" href="https://en.wikipedia.org/wiki/2025_United_States_federal_mass_layoffs" target="_blank" rel="noopener">2025, Nearly 300,000 federal workers removed. Loyalty tests embedded in 5,800 job listings.</a>
+<a class="evidence observe" href="https://www.pewresearch.org/short-reads/2026/03/13/federal-workforce-shrank-10-in-trumps-first-year-back-in-office/" target="_blank" rel="noopener">Pew Research, Federal workforce shrank 10.3% in one year. USAID gutted by 92%. CDC lost a third of staff.</a>
 
 <div class="section-break wide observe"></div>
 
-<!-- ════════ VI. THE PARADOX ════════ -->
+<!-- VI. THE PARADOX -->
 
 <div class="pivot observe">Here is the paradox.</div>
 
@@ -370,8 +371,8 @@ This is not about one man. This is about what happens when a wound is handed a m
 <span class="line">Sycophancy feels like safety.</span>
 </div>
 
-<a class="evidence observe" href="https://time.com/collections/davos-2026/7345543/trump-foreign-policy-second-term/" target="_blank" rel="noopener">TIME, Jan 2026 — World leaders now treat managing Trump's emotions as a strategic priority</a>
-<a class="evidence observe" href="https://edition.cnn.com/2025/07/10/politics/foreign-leaders-trump-sycophancy-analysis" target="_blank" rel="noopener">CNN — Foreign leaders turn the sycophancy up to eleven. No amount is deemed over the top.</a>
+<a class="evidence observe" href="https://time.com/collections/davos-2026/7345543/trump-foreign-policy-second-term/" target="_blank" rel="noopener">TIME, Jan 2026, World leaders now treat managing Trump's emotions as a strategic priority</a>
+<a class="evidence observe" href="https://edition.cnn.com/2025/07/10/politics/foreign-leaders-trump-sycophancy-analysis" target="_blank" rel="noopener">CNN, Foreign leaders turn the sycophancy up to eleven</a>
 
 <div class="verse observe">
 <span class="line">The NATO Secretary General called him "daddy."</span>
@@ -392,7 +393,7 @@ This is not about one man. This is about what happens when a wound is handed a m
 <span class="line">Loyalty cannot.</span>
 </div>
 
-<a class="evidence observe" href="https://www.ms.now/opinion/trump-iran-fbi-firings" target="_blank" rel="noopener">FBI leadership gutted. Senior national security ranks "decimated." No Cyber Command leader since April 2025.</a>
+<a class="evidence observe" href="https://www.ms.now/opinion/trump-iran-fbi-firings" target="_blank" rel="noopener">FBI leadership gutted. Senior national security ranks "decimated."</a>
 
 <div class="verse observe">
 <span class="line">This is not strategy. It is dependency.</span>
@@ -409,11 +410,11 @@ This is not about one man. This is about what happens when a wound is handed a m
 <span class="line">by telling him he already is.</span>
 </div>
 
-<a class="evidence observe" href="https://www.foreignaffairs.com/united-states/price-unpredictability" target="_blank" rel="noopener">Foreign Affairs — Flattery quickly loses value as more leaders deploy it. But they keep deploying it.</a>
+<a class="evidence observe" href="https://www.foreignaffairs.com/united-states/price-unpredictability" target="_blank" rel="noopener">Foreign Affairs, Flattery quickly loses value as more leaders deploy it. But they keep deploying it.</a>
 
 <div class="section-break wide observe"></div>
 
-<!-- ════════ VII. THE MORAL VACUUM ════════ -->
+<!-- VII. THE MORAL VACUUM -->
 
 <div class="pivot observe">Grandiosity is not confidence. It is compensation.</div>
 
@@ -431,12 +432,12 @@ This is not about one man. This is about what happens when a wound is handed a m
 
 <div class="pivot observe">"My own morality. My own mind. It's the only thing that can stop me."</div>
 
-<a class="evidence observe" href="https://abcnews.com/Politics/trump-morality-limit-global-power/story?id=129033900" target="_blank" rel="noopener">ABC News, Jan 8, 2026 — "I don't need international law. I'm not looking to hurt people."</a>
-<a class="evidence observe" href="https://www.aa.com.tr/en/americas/trump-says-he-has-a-very-high-grade-of-morality-neither-courts-constitution-sets-limits-on-his-authority/3798642" target="_blank" rel="noopener">Anadolu — Asked if his power was limited by the Constitution: "We'll never get to the courts. We'll never get to the Constitution."</a>
+<a class="evidence observe" href="https://abcnews.com/Politics/trump-morality-limit-global-power/story?id=129033900" target="_blank" rel="noopener">ABC News, Jan 8, 2026, "I don't need international law. I'm not looking to hurt people."</a>
+<a class="evidence observe" href="https://www.aa.com.tr/en/americas/trump-says-he-has-a-very-high-grade-of-morality-neither-courts-constitution-sets-limits-on-his-authority/3798642" target="_blank" rel="noopener">Anadolu, Asked if his power was limited by the Constitution: "We'll never get to the courts. We'll never get to the Constitution."</a>
 
 <div class="verse observe">
 <span class="line">A man whose father taught him that need is weakness</span>
-<span class="line">and whose mother's absence taught him that love disappears —</span>
+<span class="line">and whose mother's absence taught him that love disappears,</span>
 <span class="line">that man does not develop morality.</span>
 <span class="line">He develops strategy.</span>
 </div>
@@ -447,7 +448,7 @@ This is not about one man. This is about what happens when a wound is handed a m
 
 <div class="section-break observe"></div>
 
-<!-- ════════ VIII. HUMANITY DISAPPEARS ════════ -->
+<!-- VIII. WHERE HUMANITY DISAPPEARS -->
 
 <div class="pivot observe">And this is where humanity disappears.</div>
 
@@ -457,11 +458,11 @@ This is not about one man. This is about what happens when a wound is handed a m
 </div>
 
 <div class="verse observe">
-<span class="line">Other people become abstractions <span class="arrow">→</span></span>
-<span class="line">statistics <span class="arrow">→</span> threats <span class="arrow">→</span> invaders.</span>
+<span class="line">Other people become abstractions,</span>
+<span class="line">statistics, threats, invaders.</span>
 </div>
 
-<a class="evidence observe" href="https://thefulcrum.us/rule-of-law/trump-immigration-policy" target="_blank" rel="noopener">The Fulcrum — "animals, not human," "savages," "bad genes," "poisoning the blood"</a>
+<a class="evidence observe" href="https://thefulcrum.us/rule-of-law/trump-immigration-policy" target="_blank" rel="noopener">The Fulcrum, "animals, not human," "savages," "bad genes," "poisoning the blood"</a>
 
 <div class="verse observe">
 <span class="line">Immigrants are not families.</span>
@@ -469,10 +470,10 @@ This is not about one man. This is about what happens when a wound is handed a m
 <span class="line">They are problems to be removed.</span>
 </div>
 
-<a class="evidence observe" href="https://www.themarshallproject.org/2026/03/18/ice-children-deportation-detention-trump" target="_blank" rel="noopener">Marshall Project, March 2026 — A deaf six-year-old deported without his hearing devices. Thousands of children.</a>
-<a class="evidence observe" href="https://www.vera.org/explainers/weaponizing-the-system-one-year-of-trumps-attacks-on-due-process" target="_blank" rel="noopener">Vera Institute — 32 died in ICE custody in 2025. 65% of detainees had no criminal convictions. 93% no violent offense history.</a>
-<a class="evidence observe" href="https://en.wikipedia.org/wiki/Killing_of_Ren%C3%A9e_Good" target="_blank" rel="noopener">Jan 2026 — Renée Good, 37, U.S. citizen and mother of three, shot dead by ICE after dropping her son at school</a>
-<a class="evidence observe" href="https://en.wikipedia.org/wiki/Killing_of_Alex_Pretti" target="_blank" rel="noopener">Jan 2026 — Alex Pretti, 37, VA ICU nurse and U.S. citizen, shot dead by Border Patrol while filming</a>
+<a class="evidence observe" href="https://www.themarshallproject.org/2026/03/18/ice-children-deportation-detention-trump" target="_blank" rel="noopener">Marshall Project, March 2026, A deaf six-year-old deported without his hearing devices</a>
+<a class="evidence observe" href="https://www.vera.org/explainers/weaponizing-the-system-one-year-of-trumps-attacks-on-due-process" target="_blank" rel="noopener">Vera Institute, 32 died in ICE custody in 2025. 65% of detainees had no criminal convictions.</a>
+<a class="evidence observe" href="https://en.wikipedia.org/wiki/Killing_of_Ren%C3%A9e_Good" target="_blank" rel="noopener">Jan 2026, Renée Good, 37, U.S. citizen and mother of three, shot dead by ICE after dropping her son at school</a>
+<a class="evidence observe" href="https://en.wikipedia.org/wiki/Killing_of_Alex_Pretti" target="_blank" rel="noopener">Jan 2026, Alex Pretti, 37, VA ICU nurse and U.S. citizen, shot dead by Border Patrol while filming</a>
 
 <div class="verse observe">
 <span class="line">Because recognizing their humanity</span>
@@ -494,20 +495,20 @@ This is not about one man. This is about what happens when a wound is handed a m
 <span class="line">you mistake it for weakness.</span>
 </div>
 
-<a class="evidence observe" href="https://www.americanimmigrationcouncil.org/fact-sheet/big-beautiful-bill-immigration-border-security/" target="_blank" rel="noopener">American Immigration Council — $170 billion for enforcement. ICE now the highest-funded law enforcement agency in U.S. history.</a>
-<a class="evidence observe" href="https://www.npr.org/2025/11/12/nx-s1-5604895/trump-venezuela-drug-boat-strikes" target="_blank" rel="noopener">NPR — 115 people killed in Caribbean boat strikes. Fishermen. Laborers. A motorcycle taxi driver making $500 a trip.</a>
-<a class="evidence observe" href="https://www.hrw.org/news/2025/09/18/us-maritime-strikes-amount-to-extrajudicial-killings" target="_blank" rel="noopener">Human Rights Watch — "Unlawful extrajudicial killings." Survivors clinging to wreckage struck again.</a>
+<a class="evidence observe" href="https://www.americanimmigrationcouncil.org/fact-sheet/big-beautiful-bill-immigration-border-security/" target="_blank" rel="noopener">American Immigration Council, $170 billion for enforcement. ICE now the highest-funded law enforcement agency in U.S. history.</a>
+<a class="evidence observe" href="https://www.npr.org/2025/11/12/nx-s1-5604895/trump-venezuela-drug-boat-strikes" target="_blank" rel="noopener">NPR, 115 people killed in Caribbean boat strikes. Fishermen. Laborers.</a>
+<a class="evidence observe" href="https://www.hrw.org/news/2025/09/18/us-maritime-strikes-amount-to-extrajudicial-killings" target="_blank" rel="noopener">Human Rights Watch, "Unlawful extrajudicial killings." Survivors clinging to wreckage struck again.</a>
 
 <div class="section-break observe"></div>
 
-<!-- ════════ IX. THE MOTHER WOUND ════════ -->
+<!-- IX. THE MOTHER WOUND -->
 
 <div class="verse observe">
 <span class="line">And the mother wound lingers too.</span>
 </div>
 
 <div class="verse observe">
-<span class="line">A mother who could not — or would not — protect him</span>
+<span class="line">A mother who could not, or would not, protect him</span>
 <span class="line">leaves a split that never resolves.</span>
 </div>
 
@@ -528,7 +529,7 @@ This is not about one man. This is about what happens when a wound is handed a m
 
 <div class="section-break wide observe"></div>
 
-<!-- ════════ X. THE NEPHEW ════════ -->
+<!-- X. THE NEPHEW -->
 
 <div class="verse observe">
 <span class="line">His nephew's youngest child, William, was born</span>
@@ -544,7 +545,7 @@ This is not about one man. This is about what happens when a wound is handed a m
 <span class="line"><span class="em">Let him die.</span></span>
 </div>
 
-<a class="evidence observe" href="https://en.wikipedia.org/wiki/Fred_Trump_III" target="_blank" rel="noopener">Fred Trump III — Memoir documents the alleged response. The uncle has never met the child.</a>
+<a class="evidence observe" href="https://en.wikipedia.org/wiki/Fred_Trump_III" target="_blank" rel="noopener">Fred Trump III, Memoir documents the alleged response. The uncle has never met the child.</a>
 
 <div class="verse observe">
 <span class="line">This is not cruelty performed for cameras.</span>
@@ -561,7 +562,7 @@ This is not about one man. This is about what happens when a wound is handed a m
 
 <div class="section-break wide observe"></div>
 
-<!-- ════════ XI. THE EPSTEIN FILES ════════ -->
+<!-- XI. THE EPSTEIN FILES -->
 
 <div class="verse observe">
 <span class="line">When transparency threatened to expose him,</span>
@@ -574,7 +575,7 @@ This is not about one man. This is about what happens when a wound is handed a m
 <span class="line">He said: <span class="em">"My friends will get hurt."</span></span>
 </div>
 
-<a class="evidence observe" href="https://www.ms.now/news/greene-says-trump-told-her-his-friends-would-get-hurt-by-epstein-files" target="_blank" rel="noopener">MSNBC — Greene says Trump told her his "friends will get hurt" by Epstein files</a>
+<a class="evidence observe" href="https://www.ms.now/news/greene-says-trump-told-her-his-friends-would-get-hurt-by-epstein-files" target="_blank" rel="noopener">MSNBC, Greene says Trump told her his "friends will get hurt" by Epstein files</a>
 
 <div class="verse observe">
 <span class="line">She asked him to meet the survivors.</span>
@@ -588,7 +589,7 @@ This is not about one man. This is about what happens when a wound is handed a m
 <span class="line"><span class="em">"I don't think anybody cares about her."</span></span>
 </div>
 
-<a class="evidence observe" href="https://www.nbcnews.com/politics/congress/trump-marjorie-taylor-greene-epstein-files-rcna244621" target="_blank" rel="noopener">NBC — Greene calls his handling of the Epstein files "destructive" to the MAGA movement</a>
+<a class="evidence observe" href="https://www.nbcnews.com/politics/congress/trump-marjorie-taylor-greene-epstein-files-rcna244621" target="_blank" rel="noopener">NBC, Greene calls his handling of the Epstein files "destructive" to the MAGA movement</a>
 
 <div class="verse observe">
 <span class="line">The bill passed 427 to 1.</span>
@@ -596,7 +597,7 @@ This is not about one man. This is about what happens when a wound is handed a m
 <span class="line">The files contained his name hundreds of times.</span>
 </div>
 
-<a class="evidence observe" href="https://www.pbs.org/newshour/show/what-the-latest-epstein-files-release-reveals-and-where-trump-is-mentioned" target="_blank" rel="noopener">PBS — Flight records, hundreds of references, a 14-year-old at Mar-a-Lago</a>
+<a class="evidence observe" href="https://www.pbs.org/newshour/show/what-the-latest-epstein-files-release-reveals-and-where-trump-is-mentioned" target="_blank" rel="noopener">PBS, Flight records, hundreds of references, a 14-year-old at Mar-a-Lago</a>
 
 <div class="verse observe">
 <span class="line">She resigned from Congress.</span>
@@ -609,7 +610,7 @@ This is not about one man. This is about what happens when a wound is handed a m
 
 <div class="section-break wide observe"></div>
 
-<!-- ════════ XII. THE HOLY WAR ════════ -->
+<!-- XII. THE HOLY WAR -->
 
 <div class="verse observe">
 <span class="line">When the wound is handed a military,</span>
@@ -619,11 +620,11 @@ This is not about one man. This is about what happens when a wound is handed a m
 
 <div class="verse observe">
 <span class="line">His Secretary of Defense wears a Crusader cross on his chest.</span>
-<span class="line">"Deus Vult" — God Wills It — tattooed on his arm.</span>
+<span class="line">"Deus Vult," God Wills It, tattooed on his arm.</span>
 <span class="line">His National Guard unit once flagged him as an insider threat.</span>
 </div>
 
-<a class="evidence observe" href="https://www.pbs.org/newshour/politics/pete-hegseths-christian-rhetoric-reignites-scrutiny-after-the-u-s-goes-to-war-with-iran" target="_blank" rel="noopener">PBS — Hegseth's Christian rhetoric reignites scrutiny after the U.S. goes to war with Iran</a>
+<a class="evidence observe" href="https://www.pbs.org/newshour/politics/pete-hegseths-christian-rhetoric-reignites-scrutiny-after-the-u-s-goes-to-war-with-iran" target="_blank" rel="noopener">PBS, Hegseth's Christian rhetoric reignites scrutiny after the U.S. goes to war with Iran</a>
 
 <div class="verse observe">
 <span class="line">From the Pentagon, during an active war,</span>
@@ -636,19 +637,19 @@ This is not about one man. This is about what happens when a wound is handed a m
 <span class="line quiet">against those who deserve no mercy."</span>
 </div>
 
-<a class="evidence observe" href="https://www.pbs.org/newshour/politics/at-pentagon-christian-service-hegseth-prays-for-violence-against-those-who-deserve-no-mercy" target="_blank" rel="noopener">PBS — At Pentagon worship service, Hegseth prays for "overwhelming violence" and "eternal damnation" for enemies</a>
-<a class="evidence observe" href="https://www.npr.org/2026/03/31/nx-s1-5739333/in-pentagon-briefings-hegseth-leans-into-religious-rhetoric" target="_blank" rel="noopener">NPR — "No mercy" and "no quarter" language. Refusing quarter is a war crime under international law.</a>
+<a class="evidence observe" href="https://www.pbs.org/newshour/politics/at-pentagon-christian-service-hegseth-prays-for-violence-against-those-who-deserve-no-mercy" target="_blank" rel="noopener">PBS, At Pentagon worship service, Hegseth prays for "overwhelming violence" and "eternal damnation"</a>
+<a class="evidence observe" href="https://www.npr.org/2026/03/31/nx-s1-5739333/in-pentagon-briefings-hegseth-leans-into-religious-rhetoric" target="_blank" rel="noopener">NPR, "No mercy" and "no quarter" language. Refusing quarter is a war crime under international law.</a>
 
 <div class="verse observe">
 <span class="line">Over Easter weekend, the president declared:</span>
 <span class="line"><span class="em">"This is one of our better Easters, I think. Militarily, it's been one of the best."</span></span>
 </div>
 
-<a class="evidence observe" href="https://www.cnn.com/2026/04/06/politics/hegseth-trump-iran-war-easter-christianity-analysis" target="_blank" rel="noopener">CNN — Trump and Hegseth cast the Iran war through a lens of Christian triumphalism</a>
+<a class="evidence observe" href="https://www.cnn.com/2026/04/06/politics/hegseth-trump-iran-war-easter-christianity-analysis" target="_blank" rel="noopener">CNN, Trump and Hegseth cast the Iran war through a lens of Christian triumphalism</a>
 
 <div class="section-break wide observe"></div>
 
-<!-- ════════ XIII. THE WORLD AS PROPERTY ════════ -->
+<!-- XIII. THE WORLD AS PROPERTY -->
 
 <div class="verse observe">
 <span class="line">A man who was never given anything freely</span>
@@ -663,27 +664,27 @@ This is not about one man. This is about what happens when a wound is handed a m
 <span class="line">Colombia's president needs to "watch his ass."</span>
 </div>
 
-<a class="evidence observe" href="https://time.com/7343093/trump-venezuela-us-next-colombia-cuba-greenland-iran-mexico/" target="_blank" rel="noopener">TIME — After Venezuela: Cuba, Colombia, Greenland, Iran, Mexico — all threatened in 48 hours</a>
-<a class="evidence observe" href="https://foreignpolicy.com/2026/01/08/trump-imperialist-military-venezuela-greenland-colombia-cuba-mexico-iran/" target="_blank" rel="noopener">Foreign Policy — "'America First' is starting to look like 'America Everywhere.'"</a>
+<a class="evidence observe" href="https://time.com/7343093/trump-venezuela-us-next-colombia-cuba-greenland-iran-mexico/" target="_blank" rel="noopener">TIME, After Venezuela: Cuba, Colombia, Greenland, Iran, Mexico, all threatened in 48 hours</a>
+<a class="evidence observe" href="https://foreignpolicy.com/2026/01/08/trump-imperialist-military-venezuela-greenland-colombia-cuba-mexico-iran/" target="_blank" rel="noopener">Foreign Policy, "'America First' is starting to look like 'America Everywhere.'"</a>
 
 <div class="verse observe">
 <span class="line">When asked about Cuba, he said:</span>
 <span class="line"><span class="em">"Whether I free it, take it, I think I can do anything I want with it."</span></span>
 </div>
 
-<a class="evidence observe" href="https://en.wikipedia.org/wiki/American_expansionism_under_Donald_Trump" target="_blank" rel="noopener">Wikipedia — 11 countries threatened. 86% of Americans opposed using military force to take Greenland.</a>
+<a class="evidence observe" href="https://en.wikipedia.org/wiki/American_expansionism_under_Donald_Trump" target="_blank" rel="noopener">Wikipedia, 11 countries threatened. 86% of Americans opposed using military force to take Greenland.</a>
 
 <div class="verse observe">
 <span class="line">Ownership is the only language the wound understands.</span>
 <span class="line">Because the boy was never owned by love.</span>
 <span class="line">He was owned by expectation.</span>
-<span class="line">And now he owns everything he touches —</span>
+<span class="line">And now he owns everything he touches,</span>
 <span class="line">or destroys it trying.</span>
 </div>
 
 <div class="section-break wide observe"></div>
 
-<!-- ════════ XIV. THE WARNING ════════ -->
+<!-- XIV. THE WARNING -->
 
 <div class="closing observe">
 This is what happens<br>
@@ -724,15 +725,15 @@ to avoid feeling five years old and alone.
 <div class="pivot observe">It becomes policy.</div>
 
 <a class="evidence observe" href="https://en.wikipedia.org/wiki/2025_United_States_federal_mass_layoffs" target="_blank" rel="noopener">300,000 workers removed. Loyalty tests. Watchdogs fired. Oversight dismantled.</a>
-<a class="evidence observe" href="https://www.aclu.org/news/immigrants-rights/from-day-one-trumps-immigration-agenda-has-grown-more-extreme" target="_blank" rel="noopener">ACLU — Students jailed for speech. Citizens' children on deportation flights. Mothers arrested at check-ins.</a>
-<a class="evidence observe" href="https://www.citationneeded.news/trump-crypto-empire/" target="_blank" rel="noopener">Citation Needed — The most flagrant exploitation of presidential authority in American history. $11.6 billion in crypto. Top memecoin holders invited to dinner.</a>
-<a class="evidence observe" href="https://www.reed.senate.gov/news/releases/us-adversaries-trying-to-exploit-trumps-mass-firings-to-recruit-ousted-govt-employees-as-spies" target="_blank" rel="noopener">U.S. Senate — Foreign adversaries now recruiting fired federal workers as spies</a>
+<a class="evidence observe" href="https://www.aclu.org/news/immigrants-rights/from-day-one-trumps-immigration-agenda-has-grown-more-extreme" target="_blank" rel="noopener">ACLU, Students jailed for speech. Citizens' children on deportation flights.</a>
+<a class="evidence observe" href="https://www.citationneeded.news/trump-crypto-empire/" target="_blank" rel="noopener">Citation Needed, $11.6 billion in crypto. Top memecoin holders invited to dinner with the president.</a>
+<a class="evidence observe" href="https://www.reed.senate.gov/news/releases/us-adversaries-trying-to-exploit-trumps-mass-firings-to-recruit-ousted-govt-employees-as-spies" target="_blank" rel="noopener">U.S. Senate, Foreign adversaries now recruiting fired federal workers as spies</a>
 
 <div class="section-break wide observe"></div>
 
-<!-- ════════ XV. TODAY ════════ -->
+<!-- XV. TODAY -->
 
-<div class="timestamp observe">April 7, 2026 — Today</div>
+<div class="timestamp observe">April 7, 2026, Today</div>
 
 <div class="verse observe">
 <span class="line">And then the wound finds its final stage.</span>
@@ -750,7 +751,7 @@ to avoid feeling five years old and alone.
 
 <div class="pivot observe">"A whole civilization will die tonight."</div>
 
-<a class="evidence urgent observe" href="https://www.nbcnews.com/world/iran/live-blog/live-updates-iran-war-trump-deadline-hormuz-infrastructure-ceasefire-rcna267039" target="_blank" rel="noopener">NBC News, April 7 — Trump threatens "complete demolition" of Iran's infrastructure by midnight</a>
+<a class="evidence urgent observe" href="https://www.nbcnews.com/world/iran/live-blog/live-updates-iran-war-trump-deadline-hormuz-infrastructure-ceasefire-rcna267039" target="_blank" rel="noopener">NBC News, April 7, Trump threatens "complete demolition" of Iran's infrastructure by midnight</a>
 
 <div class="verse observe">
 <span class="line">He set a deadline: 8 p.m.</span>
@@ -760,7 +761,7 @@ to avoid feeling five years old and alone.
 <span class="line">that keeps 88 million people alive.</span>
 </div>
 
-<a class="evidence urgent observe" href="https://www.cnn.com/2026/04/07/middleeast/iran-trump-deadline-infrastructure-what-we-know" target="_blank" rel="noopener">CNN — "Complete demolition by 12 o'clock." Legal experts: targeting all civilian infrastructure is a war crime.</a>
+<a class="evidence urgent observe" href="https://www.cnn.com/2026/04/07/middleeast/iran-trump-deadline-infrastructure-what-we-know" target="_blank" rel="noopener">CNN, "Complete demolition by 12 o'clock." Legal experts: targeting all civilian infrastructure is a war crime.</a>
 
 <div class="verse observe">
 <span class="line">Asked if he was concerned about committing a war crime,</span>
@@ -771,7 +772,7 @@ to avoid feeling five years old and alone.
 <span class="line">He said the Iranian people are "willing to suffer."</span>
 </div>
 
-<a class="evidence urgent observe" href="https://www.washingtonpost.com/national/2026/04/06/iran-israel-us-lebanon-latest-april-6-2026/ba41c2b8-3178-11f1-b85b-2cd751275c1d_story.html" target="_blank" rel="noopener">Washington Post — Trump: "not at all" concerned about war crime accusations</a>
+<a class="evidence urgent observe" href="https://www.washingtonpost.com/national/2026/04/06/iran-israel-us-lebanon-latest-april-6-2026/ba41c2b8-3178-11f1-b85b-2cd751275c1d_story.html" target="_blank" rel="noopener">Washington Post, Trump: "not at all" concerned about war crime accusations</a>
 
 <div class="breath"></div>
 
@@ -785,7 +786,7 @@ to avoid feeling five years old and alone.
 <span class="line">around power plants.</span>
 </div>
 
-<a class="evidence urgent observe" href="https://www.cnn.com/2026/04/07/world/live-news/iran-war-trump-us-israel" target="_blank" rel="noopener">CNN Live — 14 million Iranians volunteer to fight. Human chains around infrastructure.</a>
+<a class="evidence urgent observe" href="https://www.cnn.com/2026/04/07/world/live-news/iran-war-trump-us-israel" target="_blank" rel="noopener">CNN Live, 14 million Iranians volunteer to fight. Human chains around infrastructure.</a>
 
 <div class="verse observe">
 <span class="line">And in the country that elected him,</span>
@@ -793,7 +794,7 @@ to avoid feeling five years old and alone.
 </div>
 
 <div class="verse observe">
-<span class="line">Marjorie Taylor Greene — once his fiercest champion —</span>
+<span class="line">Marjorie Taylor Greene, once his fiercest champion,</span>
 <span class="line">posted three words this morning:</span>
 <span class="line"><span class="strong">"25TH AMENDMENT!!!"</span></span>
 </div>
@@ -804,7 +805,7 @@ to avoid feeling five years old and alone.
 <span class="line">This is evil and madness."</span>
 </div>
 
-<a class="evidence urgent observe" href="https://www.newsweek.com/marjorie-taylor-greene-demands-25th-amendment-be-invoked-against-trump-11793483" target="_blank" rel="noopener">Newsweek — Greene, Alex Jones, and Candace Owens call for Trump's removal. His base fractures.</a>
+<a class="evidence urgent observe" href="https://www.newsweek.com/marjorie-taylor-greene-demands-25th-amendment-be-invoked-against-trump-11793483" target="_blank" rel="noopener">Newsweek, Greene, Alex Jones, and Candace Owens call for Trump's removal. His base fractures.</a>
 
 <div class="verse observe">
 <span class="line">Alex Jones called him "an unhinged super villain."</span>
@@ -812,7 +813,7 @@ to avoid feeling five years old and alone.
 <span class="line">Robert Barnes suggested an internal coup.</span>
 </div>
 
-<a class="evidence urgent observe" href="https://www.themirror.com/news/us-news/maga-civil-war-explodes-laura-1777311" target="_blank" rel="noopener">The Mirror — MAGA civil war erupts. Alex Jones asks: "How do we 25th amendment his ass?"</a>
+<a class="evidence urgent observe" href="https://www.themirror.com/news/us-news/maga-civil-war-explodes-laura-1777311" target="_blank" rel="noopener">The Mirror, MAGA civil war erupts. Alex Jones asks: "How do we 25th amendment his ass?"</a>
 
 <div class="breath-deep"></div>
 
@@ -828,7 +829,7 @@ to avoid feeling five years old and alone.
 <div class="verse observe">
 <span class="line">A man who was never allowed to lose</span>
 <span class="line">now stands at the edge of a war</span>
-<span class="line">he cannot win and cannot walk away from —</span>
+<span class="line">he cannot win and cannot walk away from,</span>
 <span class="line">because walking away would mean</span>
 <span class="line">being the boy who was not enough.</span>
 </div>
@@ -842,7 +843,7 @@ to avoid feeling five years old and alone.
 
 <div class="section-break wide observe"></div>
 
-<!-- ════════ CLOSE ════════ -->
+<!-- CLOSE -->
 
 <div class="closing observe">
 This is why the love of a father matters.<br>
@@ -850,18 +851,18 @@ This is why the protection of a mother matters.
 </div>
 
 <div class="closing observe">
-Not because it guarantees greatness —<br>
+Not because it guarantees greatness,<br>
 but because without it,<br>
 a child may spend his life trying to conquer<br>
 what only needed to be held.
 </div>
 
 <div class="question observe">
-This piece is not a diagnosis. I have never treated this man. I am not his clinician. I am a clinician who has treated men shaped by the same wound — men who built empires of control to avoid the terror of feeling small. I know the architecture because I have mapped it, in my office, in my own life, and in the culture that produces men like this by the millions.
+This piece is not a diagnosis. I have never treated this man. I am not his clinician. I am a clinician who has treated men shaped by the same wound, men who built empires of control to avoid the terror of feeling small. I know the architecture because I have mapped it, in my office, in my own life, and in the culture that produces men like this by the millions.
 
 <br><br>
 
-The question is not whether the wound is real. The evidence is public. The pattern is documented. The consequences are measurable — and tonight, they may become irreversible.
+The question is not whether the wound is real. The evidence is public. The pattern is documented. The consequences are measurable, and tonight, they may become irreversible.
 
 <br><br>
 
@@ -869,18 +870,18 @@ The question is the one you take with you:
 
 <br><br>
 
-<strong>What wound are you governing from — and who is paying the price?</strong>
+<strong>What wound are you governing from, and who is paying the price?</strong>
 </div>
 
 <div class="byline observe">
 Christian J. Charette, LMFT<br><br>
 Author of <a href="https://christianjcharette.substack.com">The Map Is Not the Territory</a><br>
-Creator of <a href="https://terminallimits.substack.com">The Human Dignity Project — Terminal Limits</a><br>
+Creator of <a href="https://terminallimits.substack.com">The Human Dignity Project, Terminal Limits</a><br>
 <a href="https://coupleforward.com">coupleforward.com</a>
 </div>
 
 <div class="note observe">
-This article is a pattern analysis grounded in publicly documented biographical material, clinical research on attachment and developmental trauma, and the observed behavior of a public figure. It is not a clinical diagnosis. Every evidence link leads to a primary source, searchable archive, or credible journalistic record. This page is a living document — as events unfold, the links update. The links are the proof. The pattern is the argument.
+This article is a pattern analysis grounded in publicly documented biographical material, clinical research on attachment and developmental trauma, and the observed behavior of a public figure. It is not a clinical diagnosis. Every evidence link leads to a primary source, searchable archive, or credible journalistic record. This page is a living document, as events unfold, the links update. The links are the proof. The pattern is the argument.
 </div>
 
 </div>
